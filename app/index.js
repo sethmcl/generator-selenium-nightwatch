@@ -30,6 +30,11 @@ var GemGenerator = yeoman.generators.Base.extend({
         default: 'My Module'
       },
       {
+        name: 'githubUrl',
+        message: 'github url?',
+        default: 'sethmcl/projectX'
+      },
+      {
         name: 'authorName',
         message: 'Author name?',
         default: 'Seth McLaughlin'
@@ -46,6 +51,7 @@ var GemGenerator = yeoman.generators.Base.extend({
       this.moduleNameSlug = this._.slugify(this.moduleName);
       this.authorName     = props.authorName;
       this.license        = props.license;
+      this.githubUrl      = props.githubUrl;
       done();
     }.bind(this));
   },
@@ -62,7 +68,10 @@ var GemGenerator = yeoman.generators.Base.extend({
     this.copy('_editorconfig', path.resolve(this.moduleNameSlug, '.editorconfig'));
     this.copy('_eslintrc', path.resolve(this.moduleNameSlug, '.eslintrc'));
     this.copy('_Gruntfile.js', path.resolve(this.moduleNameSlug, 'Gruntfile.js'));
+    this.copy('_travis.yml', path.resolve(this.moduleNameSlug, '.travis.yml'));
+    this.template('_README.md', path.resolve(this.moduleNameSlug, 'README.md'));
     this.directory('test', path.resolve(this.moduleNameSlug, 'test'));
+    this.directory('lib', path.resolve(this.moduleNameSlug, 'lib'));
   }
 });
 
