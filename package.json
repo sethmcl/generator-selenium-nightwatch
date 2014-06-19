@@ -1,6 +1,6 @@
 {
   "name": "generator-gem",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator: mocha, eslint, grunt.",
   "license": "MIT",
   "main": "app/index.js",
