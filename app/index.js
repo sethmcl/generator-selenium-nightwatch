@@ -30,6 +30,11 @@ var GemGenerator = yeoman.generators.Base.extend({
         default: 'My Module'
       },
       {
+        name: 'moduleDescription',
+        message: 'Description?',
+        default: 'An awesome module'
+      },
+      {
         name: 'githubUrl',
         message: 'github url?',
         default: 'sethmcl/projectX'
@@ -47,11 +52,12 @@ var GemGenerator = yeoman.generators.Base.extend({
     ];
 
     this.prompt(prompts, function (props) {
-      this.moduleName     = props.moduleName;
-      this.moduleNameSlug = this._.slugify(this.moduleName);
-      this.authorName     = props.authorName;
-      this.license        = props.license;
-      this.githubUrl      = props.githubUrl;
+      this.moduleDescription = props.moduleDescription;
+      this.moduleName        = props.moduleName;
+      this.moduleNameSlug    = this._.slugify(this.moduleName);
+      this.authorName        = props.authorName;
+      this.license           = props.license;
+      this.githubUrl         = props.githubUrl;
       done();
     }.bind(this));
   },
@@ -69,6 +75,8 @@ var GemGenerator = yeoman.generators.Base.extend({
     this.copy('_eslintrc', path.resolve(this.moduleNameSlug, '.eslintrc'));
     this.copy('_Gruntfile.js', path.resolve(this.moduleNameSlug, 'Gruntfile.js'));
     this.copy('_travis.yml', path.resolve(this.moduleNameSlug, '.travis.yml'));
+    this.copy('_gitignore', path.resolve(this.moduleNameSlug, '.gitignore'));
+    this.copy('_coveralls.yml', path.resolve(this.moduleNameSlug, '.coveralls.yml'));
     this.template('_README.md', path.resolve(this.moduleNameSlug, 'README.md'));
     this.directory('test', path.resolve(this.moduleNameSlug, 'test'));
     this.directory('lib', path.resolve(this.moduleNameSlug, 'lib'));
