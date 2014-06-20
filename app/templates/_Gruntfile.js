@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-mocha-istanbul');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-release');
 
   var src  = ['lib/**/*.js', 'index.js', 'bin/*'];
   var test = ['test/**/*.js'];
@@ -56,6 +57,15 @@ module.exports = function(grunt) {
       src : {
         files : src,
         tasks : ['test:fast']
+      }
+    },
+    release: {
+      options: {
+        github: { 
+          repo: '<%= githubUrl %>', //put your user/repo here
+          usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username 
+          passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+        }
       }
     }
   });

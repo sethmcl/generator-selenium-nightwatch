@@ -5,23 +5,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    npmrelease: {
-      options: {
-        push: true,
-        bump : true,
-        pushTags: true,
-        npm: true,
-        silent : false,
-        commitMessage : 'bump version number to %s'
-      },
-      patch : {
-
+    release: {
+        options: {
+          github: { 
+            repo: 'sethmcl/generator-gem', //put your user/repo here
+            // usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username 
+            // passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+          }
+        }
       }
-    }
   });
 
-  grunt.loadNpmTasks('grunt-npm-release');
-
-  // Default task(s).
-  grunt.registerTask('release', ['npmrelease']);
+  grunt.loadNpmTasks('grunt-release');
 };

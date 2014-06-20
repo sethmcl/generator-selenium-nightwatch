@@ -63,7 +63,6 @@ var GemGenerator = yeoman.generators.Base.extend({
   },
 
   app: function () {
-    console.log('app', this.someOption);
   },
 
   projectfiles: function () {
@@ -73,7 +72,7 @@ var GemGenerator = yeoman.generators.Base.extend({
     this.template('_package.json', path.resolve(this.moduleNameSlug, 'package.json'));
     this.copy('_editorconfig', path.resolve(this.moduleNameSlug, '.editorconfig'));
     this.copy('_eslintrc', path.resolve(this.moduleNameSlug, '.eslintrc'));
-    this.copy('_Gruntfile.js', path.resolve(this.moduleNameSlug, 'Gruntfile.js'));
+    this.template('_Gruntfile.js', path.resolve(this.moduleNameSlug, 'Gruntfile.js'));
     this.copy('_travis.yml', path.resolve(this.moduleNameSlug, '.travis.yml'));
     this.copy('_gitignore', path.resolve(this.moduleNameSlug, '.gitignore'));
     this.copy('_coveralls.yml', path.resolve(this.moduleNameSlug, '.coveralls.yml'));
