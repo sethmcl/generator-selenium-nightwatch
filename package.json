@@ -1,6 +1,6 @@
 {
   "name": "generator-gem",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Yeoman generator: mocha, eslint, grunt.",
   "license": "MIT",
   "main": "app/index.js",
@@ -25,12 +25,12 @@
   "dependencies": {
     "yeoman-generator": "~0.16.0",
     "chalk": "~0.4.0",
-    "yosay": "^0.1.0",
-    "grunt": "~0.4.5",
-    "grunt-npm-release": "0.0.2"
+    "yosay": "^0.1.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "grunt-release": "~0.7.0",
+    "grunt": "~0.4.5"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
