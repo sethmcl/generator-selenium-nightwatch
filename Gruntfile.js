@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     release: {
         options: {
           github: { 
-            repo: 'sethmcl/generator-gem', //put your user/repo here
+            repo: 'sethmcl/generator-selenium-nightwatch', //put your user/repo here
             // usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username 
             // passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
           }

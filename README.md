@@ -1,9 +1,9 @@
-# generator-gem [![Build Status](https://secure.travis-ci.org/sethmcl/generator-gem.png?branch=master)](https://travis-ci.org/sethmcl/generator-gem)
+# generator-selenium-nightwatch
 
-Yeoman generator to bootstrap a node project with Grunt, ESLint, and Mocha.
+Yeoman generator to bootstrap a Nightwatch.js based testing project
 
 ```bash
 $ npm install -g yo
-$ npm install -g generator-gem
-$ yo gem
+$ npm install -g generator-selenium-nightwatch
+$ yo selenium-nightwatch
 ```
