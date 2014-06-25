@@ -3,3 +3,5 @@
 coverage
 doc
 node_modules
+results
+logs

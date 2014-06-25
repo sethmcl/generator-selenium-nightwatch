@@ -1,10 +1,10 @@
 {
-  "name": "generator-gem",
+  "name": "generator-selenium-nightwatch",
   "version": "0.0.3",
-  "description": "Yeoman generator: mocha, eslint, grunt.",
+  "description": "Yeoman generator: bootstrap a Nightwatch.js selenium testing project.",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "sethmcl/generator-gem",
+  "repository": "sethmcl/generator-selenium-nightwatch",
   "author": {
     "name": "Seth McLaughlin",
     "email": "",
