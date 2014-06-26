@@ -11,6 +11,7 @@
     "selenium-server": "2.38.0",
     "dalek-browser-ie": "0.0.4",
     "nightwatch-pages": "*",
-    "nightwatch": "~0.5.6"
+    "nightwatch": "~0.5.6",
+    "phantomjs": "~1.9.7-10"
   }
 }

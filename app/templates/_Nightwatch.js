@@ -44,7 +44,15 @@ module.exports = {
 
     ie: {
       desiredCapabilities: {
-        browserName: 'ie',
+        browserName: 'internet explorer',
+        javascriptEnabled: true
+      }
+    },
+
+    phantom: {
+      desiredCapabilities: {
+        browserName: 'phantomjs',
+        'phantomjs.binary.path': require('phantomjs').path,
         javascriptEnabled: true
       }
     }
