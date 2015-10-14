@@ -8,8 +8,8 @@ module.exports = {
 
   search: function (query) {
     return this.client
-      .assert.visible('input[type=text]')
-      .setValue('input[type=text]', query)
+      .assert.visible('input[type=search]')
+      .setValue('input[type=search]', query)
       .waitForElementVisible('input[name=go]', 1000)
       .click('input[name=go]')
       .pause(1000);
